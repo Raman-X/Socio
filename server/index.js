@@ -14,6 +14,9 @@ import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import { verifyToken } from "./middleware/auth.js";
+import User from "./models/User.js";
+import Post from "./models/Post.js";
+import { users, posts } from "./data/index.js";
 
 //configuration
 const __filename = fileURLToPath(import.meta.url);
@@ -60,6 +63,9 @@ connection
     app.listen(PORT, () => {
       console.log("Server running on port: " + PORT);
     });
+    //only run once
+    // User.insertMany(users);
+    // Post.insertMany(posts);
   })
   .catch((err) => {
     console.log(err);
