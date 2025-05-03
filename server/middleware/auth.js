@@ -1,20 +1,21 @@
 import jwt from "jsonwebtoken";
+
 export const verifyToken = async (req, res, next) => {
   try {
-    let token = req.headers.authorization; // Bearer<Space><token>
-    if (!token) {
-      return res.status(403).json({ message: `Token not verified` });
-    }
-    token = token.split(" ")[1]; // extract the token
+    let token = req.header("Authorization");
 
-    const verified = jwt.verify(token, process.env.JWT_SECRET); // returns data from payload
-    if (!verified) {
-      // this is unnecessary jwt.verify will throw error itself
-      return res.status(401).json({ error: "Invalid token" });
+    if (!token) {
+      return res.status(403).send("Access Denied");
     }
+
+    if (token.startsWith("Bearer ")) {
+      token = token.slice(7, token.length).trimLeft();
+    }
+
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
     req.user = verified;
     next();
-  } catch (error) {
-    return res.status(500).json({ error: error });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
   }
 };

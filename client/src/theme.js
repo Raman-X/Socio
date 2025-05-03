@@ -1,42 +1,41 @@
-// color design tokens export
+// Updated color design tokens export
 export const colorTokens = {
   grey: {
     0: "#FFFFFF",
-    10: "#F6F6F6",
-    50: "#F0F0F0",
-    100: "#E0E0E0",
-    200: "#C2C2C2",
-    300: "#A3A3A3",
-    400: "#858585",
-    500: "#666666",
-    600: "#4D4D4D",
-    700: "#333333",
-    800: "#1A1A1A",
-    900: "#0A0A0A",
-    1000: "#000000",
+    10: "#FAFAFA",
+    50: "#F5F5F5",
+    100: "#E5E5E5",
+    200: "#CCCCCC",
+    300: "#B3B3B3",
+    400: "#999999",
+    500: "#808080",
+    600: "#666666",
+    700: "#4D4D4D",
+    800: "#333333",
+    900: "#1A1A1A",
+    1000: "#0D0D0D",
   },
   primary: {
-    50: "#E6FBFF",
-    100: "#CCF7FE",
-    200: "#99EEFD",
-    300: "#66E6FC",
-    400: "#33DDFB",
-    500: "#00D5FA",
-    600: "#00A0BC",
-    700: "#006B7D",
-    800: "#00353F",
-    900: "#001519",
+    50: "#EAF4FF",
+    100: "#D6EFFF",
+    200: "#ADDFFF",
+    300: "#85CEFF",
+    400: "#5CBFFF",
+    500: "#33B0FF", // Main
+    600: "#008DE0", // Dark
+    700: "#006FB3",
+    800: "#004C80", // Light in dark mode
+    900: "#002640",
   },
 };
 
-// mui theme settings
+// Updated MUI theme settings
 export const themeSettings = (mode) => {
   return {
     palette: {
-      mode: mode,
+      mode,
       ...(mode === "dark"
-          ? {
-            // palette values for dark mode
+        ? {
             primary: {
               dark: colorTokens.primary[200],
               main: colorTokens.primary[500],
@@ -44,9 +43,9 @@ export const themeSettings = (mode) => {
             },
             neutral: {
               dark: colorTokens.grey[100],
-              main: colorTokens.grey[200],
-              mediumMain: colorTokens.grey[300],
-              medium: colorTokens.grey[400],
+              main: colorTokens.grey[300],
+              mediumMain: colorTokens.grey[400],
+              medium: colorTokens.grey[500],
               light: colorTokens.grey[700],
             },
             background: {
@@ -54,52 +53,57 @@ export const themeSettings = (mode) => {
               alt: colorTokens.grey[800],
             },
           }
-          : {
-            // palette values for light mode
+        : {
             primary: {
               dark: colorTokens.primary[700],
               main: colorTokens.primary[500],
               light: colorTokens.primary[50],
             },
             neutral: {
-              dark: colorTokens.grey[700],
-              main: colorTokens.grey[500],
-              mediumMain: colorTokens.grey[400],
-              medium: colorTokens.grey[300],
-              light: colorTokens.grey[50],
+              dark: colorTokens.grey[800],
+              main: colorTokens.grey[600],
+              mediumMain: colorTokens.grey[500],
+              medium: colorTokens.grey[400],
+              light: colorTokens.grey[100],
             },
             background: {
-              default: colorTokens.grey[10],
-              alt: colorTokens.grey[0],
+              default: colorTokens.grey[50],
+              alt: colorTokens.grey[10],
             },
           }),
     },
     typography: {
       fontFamily: ["Rubik", "sans-serif"].join(","),
-      fontSize: 12,
+      fontSize: 14,
       h1: {
         fontFamily: ["Rubik", "sans-serif"].join(","),
-        fontSize: 40,
+        fontSize: 42,
+        fontWeight: 600,
       },
       h2: {
         fontFamily: ["Rubik", "sans-serif"].join(","),
-        fontSize: 32,
+        fontSize: 34,
+        fontWeight: 600,
       },
       h3: {
         fontFamily: ["Rubik", "sans-serif"].join(","),
-        fontSize: 24,
+        fontSize: 26,
+        fontWeight: 500,
       },
       h4: {
         fontFamily: ["Rubik", "sans-serif"].join(","),
-        fontSize: 20,
+        fontSize: 22,
+        fontWeight: 500,
       },
       h5: {
         fontFamily: ["Rubik", "sans-serif"].join(","),
-        fontSize: 16,
+        fontSize: 18,
+        fontWeight: 500,
       },
       h6: {
         fontFamily: ["Rubik", "sans-serif"].join(","),
-        fontSize: 14,
+        fontSize: 16,
+        fontWeight: 400,
       },
     },
   };

@@ -9,11 +9,24 @@
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/linkedin.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/assets/linkedin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/assets/twitter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/scenes/homePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/homePage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/scenes/loginPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/loginPage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/scenes/navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/navbar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/state/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/state/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scenes/profilePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/profilePage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/assets/picture-1745486429592-970848500" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/assets/picture-1745486429592-970848500.jfif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/assets/picture-1745486620034-370072551" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/assets/picture-1745486620034-370072551.jfif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,27 +44,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/raman/WebstormProjects/social_media/client/src/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\raman\\WebstormProjects\\social_media\\server\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/raman/WebstormProjects/social_media",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\raman\\WebstormProjects\\social_media\\client\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\raman\WebstormProjects\social_media\client\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\raman\WebstormProjects\social_media\client\public" />
       <recent name="C:\Users\raman\WebstormProjects\social_media\server" />
     </key>
   </component>
@@ -70,7 +85,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744967026495</updated>
-      <workItem from="1744967027614" duration="48286000" />
+      <workItem from="1744967027614" duration="64843000" />
+      <workItem from="1746286467060" duration="5331000" />
     </task>
     <servers />
   </component>
