@@ -1,10 +1,9 @@
 import {
-  EditOutlined,
   AccountCircle,
   LocationOnOutlined,
   WorkOutlineOutlined,
 } from "@mui/icons-material";
-import { Box, Typography, Divider, useTheme } from "@mui/material";
+import { Box, Typography, Divider, useTheme, Tooltip } from "@mui/material";
 import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
@@ -43,8 +42,7 @@ const UserWidget = ({ userId, picturePath }) => {
     lastName,
     location,
     occupation,
-    viewedProfile,
-    impressions,
+
     friends,
   } = user;
 
@@ -55,6 +53,7 @@ const UserWidget = ({ userId, picturePath }) => {
         gap="0.5rem"
         pb="1.1rem"
         onClick={() => navigate(`/profile/${userId}`)}
+        sx={{ alignItems: "flex-start" }}
       >
         <FlexBetween gap="1rem">
           <UserImage image={picturePath} />
@@ -75,7 +74,11 @@ const UserWidget = ({ userId, picturePath }) => {
             <Typography color={medium}>{friends.length} friends</Typography>
           </Box>
         </FlexBetween>
-        <AccountCircle sx={{ "&:hover": { cursor: "pointer" } }} />
+        <Tooltip title="profile" placement="top" arrow>
+          <AccountCircle
+            sx={{ "&:hover": { cursor: "pointer" }, marginTop: 0.25 }}
+          />
+        </Tooltip>
       </FlexBetween>
 
       <Divider />
@@ -91,8 +94,6 @@ const UserWidget = ({ userId, picturePath }) => {
           <Typography color={medium}>{occupation}</Typography>
         </Box>
       </Box>
-
-      <Divider />
     </WidgetWrapper>
   );
 };

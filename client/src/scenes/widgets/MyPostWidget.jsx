@@ -71,6 +71,9 @@ const MyPostWidget = ({ picturePath }) => {
             backgroundColor: palette.neutral.light,
             borderRadius: "2rem",
             padding: "1rem 2rem",
+            "& ::placeholder": {
+              opacity: 0.6,
+            },
           }}
         />
       </FlexBetween>

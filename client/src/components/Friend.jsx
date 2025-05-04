@@ -43,9 +43,9 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
       <FlexBetween gap="1rem">
         <UserImage image={userPicturePath} size="55px" />
         <Box
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             navigate(`/profile/${friendId}`);
-            navigate(0);
           }}
         >
           <Typography

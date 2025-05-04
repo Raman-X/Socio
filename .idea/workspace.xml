@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5b9b1c03-3830-4077-9586-35eb357e4006" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/FriendListWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/FriendListWidget.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Friend.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scenes/profilePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/profilePage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/MyPostWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/MyPostWidget.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/UserWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/UserWidget.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +70,7 @@
       <updated>1744967026495</updated>
       <workItem from="1744967027614" duration="64843000" />
       <workItem from="1746286467060" duration="8857000" />
-      <workItem from="1746327395927" duration="12614000" />
+      <workItem from="1746327395927" duration="17738000" />
     </task>
     <servers />
   </component>
