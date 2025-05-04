@@ -24,6 +24,7 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "../../state";
+import FlexEnd from "../../components/FlexEnd.jsx";
 
 const MyPostWidget = ({ picturePath }) => {
   const dispatch = useDispatch();
@@ -120,7 +121,7 @@ const MyPostWidget = ({ picturePath }) => {
 
       <Divider sx={{ margin: "1.25rem 0" }} />
 
-      <FlexBetween>
+      <FlexEnd>
         <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
           <ImageOutlined sx={{ color: mediumMain }} />
           <Typography
@@ -130,29 +131,6 @@ const MyPostWidget = ({ picturePath }) => {
             Image
           </Typography>
         </FlexBetween>
-
-        {isNonMobileScreens ? (
-          <>
-            <FlexBetween gap="0.25rem">
-              <GifBoxOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Clip</Typography>
-            </FlexBetween>
-
-            <FlexBetween gap="0.25rem">
-              <AttachFileOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Attachment</Typography>
-            </FlexBetween>
-
-            <FlexBetween gap="0.25rem">
-              <MicOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Audio</Typography>
-            </FlexBetween>
-          </>
-        ) : (
-          <FlexBetween gap="0.25rem">
-            <MoreHorizOutlined sx={{ color: mediumMain }} />
-          </FlexBetween>
-        )}
 
         <Button
           disabled={!post}
@@ -165,7 +143,7 @@ const MyPostWidget = ({ picturePath }) => {
         >
           POST
         </Button>
-      </FlexBetween>
+      </FlexEnd>
     </WidgetWrapper>
   );
 };

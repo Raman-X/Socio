@@ -1,35 +1,35 @@
-// Updated color design tokens export
+// Modernized color tokens
 export const colorTokens = {
   grey: {
     0: "#FFFFFF",
-    10: "#FAFAFA",
-    50: "#F5F5F5",
-    100: "#E5E5E5",
-    200: "#CCCCCC",
-    300: "#B3B3B3",
-    400: "#999999",
-    500: "#808080",
-    600: "#666666",
-    700: "#4D4D4D",
-    800: "#333333",
-    900: "#1A1A1A",
-    1000: "#0D0D0D",
+    10: "#F9FAFB",
+    50: "#F3F4F6",
+    100: "#E5E7EB",
+    200: "#D1D5DB",
+    300: "#9CA3AF",
+    400: "#6B7280",
+    500: "#4B5563",
+    600: "#374151",
+    700: "#1F2937",
+    800: "#111827",
+    900: "#0B1120",
+    1000: "#030712",
   },
   primary: {
-    50: "#EAF4FF",
-    100: "#D6EFFF",
-    200: "#ADDFFF",
-    300: "#85CEFF",
-    400: "#5CBFFF",
-    500: "#33B0FF", // Main
-    600: "#008DE0", // Dark
-    700: "#006FB3",
-    800: "#004C80", // Light in dark mode
-    900: "#002640",
+    50: "#EFF6FF",
+    100: "#DBEAFE",
+    200: "#BFDBFE",
+    300: "#93C5FD",
+    400: "#60A5FA",
+    500: "#3B82F6", // Main Blue
+    600: "#2563EB", // Stronger Blue
+    700: "#1D4ED8",
+    800: "#1E40AF", // For dark mode highlight
+    900: "#1E3A8A",
   },
 };
 
-// Updated MUI theme settings
+// Modernized MUI Theme with Poppins
 export const themeSettings = (mode) => {
   return {
     palette: {
@@ -57,7 +57,7 @@ export const themeSettings = (mode) => {
             primary: {
               dark: colorTokens.primary[700],
               main: colorTokens.primary[500],
-              light: colorTokens.primary[50],
+              light: colorTokens.primary[100],
             },
             neutral: {
               dark: colorTokens.grey[800],
@@ -67,43 +67,69 @@ export const themeSettings = (mode) => {
               light: colorTokens.grey[100],
             },
             background: {
-              default: colorTokens.grey[50],
-              alt: colorTokens.grey[10],
+              default: colorTokens.grey[10],
+              alt: colorTokens.grey[0],
             },
           }),
     },
     typography: {
-      fontFamily: ["Rubik", "sans-serif"].join(","),
+      fontFamily: ["Poppins", "sans-serif"].join(","),
       fontSize: 14,
       h1: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
-        fontSize: 42,
-        fontWeight: 600,
+        fontFamily: ["Poppins", "sans-serif"].join(","),
+        fontSize: 40,
+        fontWeight: 700,
+        lineHeight: 1.2,
       },
       h2: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
-        fontSize: 34,
+        fontFamily: ["Poppins", "sans-serif"].join(","),
+        fontSize: 32,
         fontWeight: 600,
       },
       h3: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Poppins", "sans-serif"].join(","),
         fontSize: 26,
-        fontWeight: 500,
+        fontWeight: 600,
       },
       h4: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Poppins", "sans-serif"].join(","),
         fontSize: 22,
         fontWeight: 500,
       },
       h5: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Poppins", "sans-serif"].join(","),
         fontSize: 18,
         fontWeight: 500,
       },
       h6: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Poppins", "sans-serif"].join(","),
         fontSize: 16,
         fontWeight: 400,
+      },
+      body1: {
+        fontSize: 14,
+        fontWeight: 400,
+      },
+      body2: {
+        fontSize: 12,
+        fontWeight: 400,
+      },
+      button: {
+        textTransform: "none",
+        fontWeight: 500,
+      },
+    },
+    shape: {
+      borderRadius: 12,
+    },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            borderRadius: 12,
+            textTransform: "none",
+          },
+        },
       },
     },
   };
