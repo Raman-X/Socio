@@ -1,7 +1,7 @@
 // Modernized color tokens
 export const colorTokens = {
   grey: {
-    0: "#FFFFFF",
+    0: "#FFFFFD",
     10: "#F9FAFB",
     50: "#F3F4F6",
     100: "#E5E7EB",
