@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b9b1c03-3830-4077-9586-35eb357e4006" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/FlexEnd.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/scenes/homePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/homePage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/scenes/navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/navbar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/AdvertisementWidget.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/MyPostWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/MyPostWidget.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/PostWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/PostWidget.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/UserWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/UserWidget.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/PostsWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/PostsWidget.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/posts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +74,7 @@
       <updated>1744967026495</updated>
       <workItem from="1744967027614" duration="64843000" />
       <workItem from="1746286467060" duration="8857000" />
-      <workItem from="1746327395927" duration="679000" />
+      <workItem from="1746327395927" duration="5450000" />
     </task>
     <servers />
   </component>

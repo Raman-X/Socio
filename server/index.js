@@ -43,11 +43,11 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-/* route with file */
+/* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
 app.post("/posts", verifyToken, upload.single("picture"), createPost);
 
-/* routes */
+/* ROUTES */
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
@@ -55,7 +55,7 @@ app.use("/posts", postRoutes);
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URL)
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 

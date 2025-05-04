@@ -1,22 +1,23 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
     firstName: {
       type: String,
       required: true,
       min: 2,
-      max: 20,
+      max: 50,
     },
     lastName: {
       type: String,
       required: true,
       min: 2,
-      max: 20,
+      max: 50,
     },
     email: {
       type: String,
       required: true,
+      max: 50,
       unique: true,
     },
     password: {
@@ -34,11 +35,11 @@ const userSchema = new mongoose.Schema(
     },
     location: String,
     occupation: String,
-    viewedProfile: String,
-    impressions: String,
+    viewedProfile: Number,
+    impressions: Number,
   },
   { timestamps: true },
 );
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("User", UserSchema);
 export default User;

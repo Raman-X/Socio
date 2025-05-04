@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const postSchema = new mongoose.Schema(
+const postSchema = mongoose.Schema(
   {
     userId: {
       type: String,
@@ -18,7 +18,7 @@ const postSchema = new mongoose.Schema(
     description: String,
     picturePath: String,
     userPicturePath: String,
-    like: {
+    likes: {
       type: Map,
       of: Boolean,
     },
@@ -31,4 +31,5 @@ const postSchema = new mongoose.Schema(
 );
 
 const Post = mongoose.model("Post", postSchema);
+
 export default Post;

@@ -14,7 +14,7 @@ export const createPost = async (req, res) => {
       description,
       userPicturePath: user.picturePath,
       picturePath,
-      like: {},
+      likes: {},
       comments: [],
     });
     await newPost.save();
@@ -48,38 +48,26 @@ export const getUserPosts = async (req, res) => {
 
 /* UPDATE */
 export const likePost = async (req, res) => {
-  // try {
+  try {
+    const { id } = req.params;
+    const { userId } = req.body;
+    const post = await Post.findById(id);
+    const isLiked = post.likes.get(userId);
 
-  console.log("TESTING", req.body, req.params);
-  const { id } = req.params;
-  const { userId } = req.body;
-  const post = await Post.findById(id);
-  if (!post) {
-    return res.status(400).json({ error: "Post not found" });
+    if (isLiked) {
+      post.likes.delete(userId);
+    } else {
+      post.likes.set(userId, true);
+    }
+
+    const updatedPost = await Post.findByIdAndUpdate(
+      id,
+      { likes: post.likes },
+      { new: true },
+    );
+
+    res.status(200).json(updatedPost);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
   }
-  console.log("post", post);
-  const isLiked = post.like.get(userId);
-
-  console.log("isLiked", isLiked);
-
-  if (isLiked) {
-    post.like.delete(userId);
-  } else {
-    post.like.set(userId, true);
-  }
-
-  const updatedPost = await Post.findByIdAndUpdate(
-    id,
-    { like: post.like },
-    { new: true }
-  );
-
-  if (!updatedPost) {
-    return res.status(400).json({ error: "Post not found" });
-  }
-  res.status(200).json(updatedPost);
-  // }
-  // catch (err) {
-  //   res.status(400).json({ error: err.message });
-  // }
 };
