@@ -73,36 +73,36 @@ export const themeSettings = (mode) => {
           }),
     },
     typography: {
-      fontFamily: ["Poppins", "sans-serif"].join(","),
+      fontFamily: ["Comic Relief", "sans-serif"].join(","),
       fontSize: 14,
       h1: {
-        fontFamily: ["Poppins", "sans-serif"].join(","),
+        fontFamily: ["Comic Relief", "sans-serif"].join(","),
         fontSize: 40,
         fontWeight: 700,
         lineHeight: 1.2,
       },
       h2: {
-        fontFamily: ["Poppins", "sans-serif"].join(","),
+        fontFamily: ["Comic Relief", "sans-serif"].join(","),
         fontSize: 32,
         fontWeight: 600,
       },
       h3: {
-        fontFamily: ["Poppins", "sans-serif"].join(","),
+        fontFamily: ["Comic Relief", "sans-serif"].join(","),
         fontSize: 26,
         fontWeight: 600,
       },
       h4: {
-        fontFamily: ["Poppins", "sans-serif"].join(","),
+        fontFamily: ["Comic Relief", "sans-serif"].join(","),
         fontSize: 22,
         fontWeight: 500,
       },
       h5: {
-        fontFamily: ["Poppins", "sans-serif"].join(","),
+        fontFamily: ["Comic Relief", "sans-serif"].join(","),
         fontSize: 18,
         fontWeight: 500,
       },
       h6: {
-        fontFamily: ["Poppins", "sans-serif"].join(","),
+        fontFamily: ["Comic Relief", "sans-serif"].join(","),
         fontSize: 16,
         fontWeight: 400,
       },
