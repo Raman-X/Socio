@@ -1,6 +1,6 @@
 import {
-  ManageAccountsOutlined,
   EditOutlined,
+  AccountCircle,
   LocationOnOutlined,
   WorkOutlineOutlined,
 } from "@mui/icons-material";
@@ -75,7 +75,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <Typography color={medium}>{friends.length} friends</Typography>
           </Box>
         </FlexBetween>
-        <ManageAccountsOutlined />
+        <AccountCircle sx={{ "&:hover": { cursor: "pointer" } }} />
       </FlexBetween>
 
       <Divider />
