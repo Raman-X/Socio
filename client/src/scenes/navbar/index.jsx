@@ -62,7 +62,8 @@ const Navbar = () => {
           <img
             src={`/assets/${theme.palette.mode === "dark" ? "ryappi%20dark.png" : "ryappi%20white.png"}`}
             alt="logo"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", cursor: "pointer" }}
+            onClick={() => navigate("/home")}
           />
         </Box>
       </FlexBetween>
