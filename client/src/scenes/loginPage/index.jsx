@@ -9,11 +9,13 @@ import Form from "./Form";
 import { setMode } from "../../state/index.js";
 import { DarkMode, LightMode } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const theme = useTheme();
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <Box paddingBottom={"1rem"}>
       <Box
@@ -27,7 +29,10 @@ const LoginPage = () => {
         {/*  fontSize="32px"*/}
         {/*  color="primary"*/}
         {/*></Typography>*/}
-        <Box sx={{ width: "10rem", margin: "0 auto" }}>
+        <Box
+          sx={{ width: "10rem", margin: "0 auto", cursor: "pointer" }}
+          onClick={() => navigate("/home")}
+        >
           <img
             src={`/assets/${theme.palette.mode === "dark" ? "ryappi%20dark.png" : "ryappi%20white.png"}`}
             alt="logo"
@@ -60,10 +65,22 @@ const LoginPage = () => {
         <Typography
           fontWeight="700"
           variant="h4"
-          leading="10px"
-          sx={{ mb: "1.5rem" }}
-          textAlign="center"
-          letterSpacing={"0.1rem"}
+          sx={{
+            mb: "1.5rem",
+            textAlign: "center",
+            letterSpacing: "0.1rem",
+            "@keyframes fadeInSide": {
+              from: {
+                opacity: 0,
+                transform: "translateX(-50px)",
+              },
+              to: {
+                opacity: 1,
+                transform: "translateX(0)",
+              },
+            },
+            animation: "fadeInSide 1s ease-out forwards",
+          }}
         >
           WELCOME TO RYAPPI
         </Typography>
