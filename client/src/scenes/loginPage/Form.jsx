@@ -239,14 +239,18 @@ const Form = () => {
               type="submit"
               sx={{
                 m: "2rem 0",
-                p: "1rem",
+                p: "0.5rem",
                 backgroundColor: palette.primary.main,
                 color: palette.background.alt,
-                "&:hover": { color: palette.primary.main },
+                transition: "transform 0.2s ease-in-out", // Add transition
+                "&:hover": {
+                  transform: "scale(1.075)", // Use transform, not scale directly
+                },
               }}
             >
               {isLogin ? "LOGIN" : "REGISTER"}
             </Button>
+
             <Typography
               onClick={() => {
                 setPageType(isLogin ? "register" : "login");

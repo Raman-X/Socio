@@ -42,22 +42,29 @@ const Navbar = () => {
   const fullName = `${user.firstName} ${user.lastName}`;
 
   return (
-    <FlexBetween padding="1rem 6%" backgroundColor={alt}>
+    <FlexBetween padding="0.40rem 6% 0.10rem 6%" backgroundColor={alt}>
       <FlexBetween gap="1.75rem">
-        <Typography
-          fontWeight="bold"
-          fontSize="clamp(1rem, 2rem, 2.25rem)"
-          color="primary"
-          onClick={() => navigate("/home")}
-          sx={{
-            "&:hover": {
-              color: primaryLight,
-              cursor: "pointer",
-            },
-          }}
-        >
-          Social Media
-        </Typography>
+        {/*<Typography*/}
+        {/*  fontWeight="bold"*/}
+        {/*  fontSize="clamp(1rem, 2rem, 2.25rem)"*/}
+        {/*  color="primary"*/}
+        {/*  onClick={() => navigate("/home")}*/}
+        {/*  sx={{*/}
+        {/*    "&:hover": {*/}
+        {/*      color: primaryLight,*/}
+        {/*      cursor: "pointer",*/}
+        {/*    },*/}
+        {/*  }}*/}
+        {/*>*/}
+        {/*  Social Media*/}
+        {/*</Typography>*/}
+        <Box sx={{ width: "10rem", margin: "0 auto" }}>
+          <img
+            src={`/assets/${theme.palette.mode === "dark" ? "ryappi%20dark.png" : "ryappi%20white.png"}`}
+            alt="logo"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </Box>
       </FlexBetween>
 
       {/* DESKTOP NAV */}
