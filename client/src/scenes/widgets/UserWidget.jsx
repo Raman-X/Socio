@@ -53,7 +53,14 @@ const UserWidget = ({ userId, picturePath }) => {
         gap="0.5rem"
         pb="1.1rem"
         onClick={() => navigate(`/profile/${userId}`)}
-        sx={{ alignItems: "flex-start" }}
+        sx={{
+          alignItems: "flex-start",
+          cursor: "pointer",
+          "&:hover .name": {
+            textDecoration: "underline",
+            color: palette.primary.light,
+          },
+        }}
       >
         <FlexBetween gap="1rem">
           <UserImage image={picturePath} />
@@ -62,12 +69,7 @@ const UserWidget = ({ userId, picturePath }) => {
               variant="h4"
               color={dark}
               fontWeight="500"
-              sx={{
-                "&:hover": {
-                  color: palette.primary.light,
-                  cursor: "pointer",
-                },
-              }}
+              className={"name"}
             >
               {firstName} {lastName}
             </Typography>
