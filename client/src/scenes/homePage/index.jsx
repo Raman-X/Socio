@@ -16,7 +16,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 125); // Show after 100px scroll
+      setShowScrollTop(window.scrollY > 125); // Show after 125px scroll
     };
 
     window.addEventListener("scroll", handleScroll);

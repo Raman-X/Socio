@@ -189,13 +189,14 @@ const Form = () => {
                     {({ getRootProps, getInputProps }) => (
                       <Box
                         {...getRootProps()}
-                        border={`2px dashed ${palette.primary.main}`}
+                        border={`2px dashed ${palette.neutral.main}`}
                         p="1rem"
                         sx={{ "&:hover": { cursor: "pointer" } }}
+                        textAlign="center"
                       >
                         <input {...getInputProps()} />
                         {!values.picture ? (
-                          <p>Add Picture Here</p>
+                          <p>--- Add Picture Here ---</p>
                         ) : (
                           <FlexBetween>
                             <Typography>{values.picture.name}</Typography>
@@ -240,7 +241,7 @@ const Form = () => {
               sx={{
                 m: "2rem 0",
                 p: "0.5rem",
-                backgroundColor: palette.primary.main,
+                backgroundColor: palette.neutral.dark,
                 color: palette.background.alt,
                 transition: "transform 0.2s ease-in-out", // Add transition
                 "&:hover": {
@@ -258,10 +259,9 @@ const Form = () => {
               }}
               sx={{
                 textDecoration: "underline",
-                color: palette.primary.main,
+                color: palette.neutral.main,
                 "&:hover": {
                   cursor: "pointer",
-                  color: palette.primary.light,
                 },
               }}
             >

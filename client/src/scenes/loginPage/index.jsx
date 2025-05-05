@@ -15,7 +15,7 @@ const LoginPage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   const dispatch = useDispatch();
   return (
-    <Box>
+    <Box paddingBottom={"1rem"}>
       <Box
         width="100%"
         backgroundColor={theme.palette.background.alt}
@@ -43,6 +43,7 @@ const LoginPage = () => {
         borderRadius="1.5rem"
         backgroundColor={theme.palette.background.alt}
         position="relative"
+        boxShadow={`10px 10px 1px rgba(0, 0, 0, ${theme.palette.mode !== "dark" ? "0.05" : "0.25"})`}
       >
         <IconButton
           onClick={() => dispatch(setMode())}
@@ -57,14 +58,14 @@ const LoginPage = () => {
           )}
         </IconButton>
         <Typography
-          fontWeight="500"
-          variant="h5"
+          fontWeight="700"
+          variant="h4"
           leading="10px"
           sx={{ mb: "1.5rem" }}
           textAlign="center"
-          letterSpacing={"0.08rem"}
+          letterSpacing={"0.1rem"}
         >
-          Welcome to the ryappi site
+          WELCOME TO RYAPPI
         </Typography>
 
         <Form />
