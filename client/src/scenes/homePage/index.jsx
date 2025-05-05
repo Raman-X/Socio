@@ -29,8 +29,8 @@ const HomePage = () => {
           sx={{
             fontSize: 60,
             position: "fixed",
-            bottom: "10px",
-            left: "10px",
+            bottom: "15px",
+            right: "15px",
             cursor: "pointer",
           }}
           onClick={() => {
