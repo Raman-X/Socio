@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "../../state";
 import PostWidget from "./PostWidget";
-import {
-  Box,
-  Typography,
-  useTheme,
-  Fade,
-  CircularProgress,
-  Skeleton,
-} from "@mui/material";
+import { Box, Typography, useTheme, Skeleton } from "@mui/material";
+
+import { useEffect, useState, useMemo } from "react";
 
 const PostsWidget = ({ userId, isProfile = false, sortOrder }) => {
   const dispatch = useDispatch();
@@ -18,107 +12,94 @@ const PostsWidget = ({ userId, isProfile = false, sortOrder }) => {
   const { palette } = useTheme();
 
   const [loading, setLoading] = useState(true);
-  const [renderedPosts, setRenderedPosts] = useState([]);
+  const [localSortOrder, setLocalSortOrder] = useState(sortOrder);
 
-  const getPosts = async () => {
-    setLoading(true);
-    const response = await fetch("http://localhost:3001/posts", {
-      method: "GET",
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    const data = await response.json();
-    dispatch(setPosts({ posts: data }));
-    setLoading(false);
-  };
-
-  const getUserPosts = async () => {
-    setLoading(true);
-    const response = await fetch(
-      `http://localhost:3001/posts/${userId}/posts`,
-      {
-        method: "GET",
-        headers: { Authorization: `Bearer ${token}` },
-      },
-    );
-    const data = await response.json();
-    dispatch(setPosts({ posts: data }));
-    setLoading(false);
-  };
-
+  // Fetch posts initially
   useEffect(() => {
-    if (isProfile) {
-      getUserPosts();
-    } else {
-      getPosts();
-    }
+    const fetchPosts = async () => {
+      setLoading(true);
+      if (isProfile) {
+        const response = await fetch(
+          `http://localhost:3001/posts/${userId}/posts`,
+          {
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}` },
+          },
+        );
+        const data = await response.json();
+        dispatch(setPosts({ posts: data }));
+      } else {
+        const response = await fetch("http://localhost:3001/posts", {
+          method: "GET",
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        const data = await response.json();
+        dispatch(setPosts({ posts: data }));
+      }
+      setLoading(false);
+    };
+    fetchPosts();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Watch for sortOrder change
   useEffect(() => {
-    setLoading(true);
-    const sorted = sortOrder === "latest" ? [...posts].reverse() : [...posts];
-    // Simulate fade-in effect slightly after sorting
-    const timeout = setTimeout(() => {
-      setRenderedPosts(sorted);
-      setLoading(false);
-    }, 150); // feel free to tune this delay
+    if (sortOrder !== localSortOrder) {
+      setLoading(true);
+      setLocalSortOrder(sortOrder);
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 400); // short delay for feedback
+      return () => clearTimeout(timer);
+    }
+  }, [sortOrder]);
 
-    return () => clearTimeout(timeout);
-  }, [sortOrder, posts]);
+  const sortedPosts = useMemo(() => {
+    return sortOrder === "latest" ? [...posts].reverse() : [...posts];
+  }, [posts, sortOrder]);
 
   return (
     <>
       {loading ? (
-        <>
-          {[...Array(3)].map((_, i) => (
-            <Box key={i} my={"2rem"}>
-              <Skeleton
-                variant="rectangular"
-                height={180}
-                sx={{ borderRadius: 1, bgcolor: palette.background.alt }}
-              />
-              <Skeleton
-                width="60%"
-                sx={{ borderRadius: 1, bgcolor: palette.background.alt }}
-              />
-              <Skeleton
-                width="80%"
-                sx={{ borderRadius: 1, bgcolor: palette.background.alt }}
-              />
-            </Box>
-          ))}
-        </>
-      ) : renderedPosts.length !== 0 ? (
-        <Fade in timeout={400}>
-          <Box>
-            {renderedPosts.map(
-              ({
-                _id,
-                userId,
-                firstName,
-                lastName,
-                description,
-                location,
-                picturePath,
-                userPicturePath,
-                likes = {},
-                comments,
-              }) => (
-                <PostWidget
-                  key={_id}
-                  postId={_id}
-                  postUserId={userId}
-                  name={`${firstName} ${lastName}`}
-                  description={description}
-                  location={location}
-                  picturePath={picturePath}
-                  userPicturePath={userPicturePath}
-                  likes={likes}
-                  comments={comments}
-                />
-              ),
-            )}
-          </Box>
-        </Fade>
+        Array.from({ length: 2 }).map((_, index) => (
+          <Box
+            key={index}
+            sx={{
+              height: "160px",
+              backgroundColor: palette.background.alt,
+              borderRadius: 2,
+              my: 2,
+              animation: "pulse 1.5s infinite",
+            }}
+          />
+        ))
+      ) : sortedPosts.length !== 0 ? (
+        sortedPosts.map(
+          ({
+            _id,
+            userId,
+            firstName,
+            lastName,
+            description,
+            location,
+            picturePath,
+            userPicturePath,
+            likes = {},
+            comments,
+          }) => (
+            <PostWidget
+              key={_id}
+              postId={_id}
+              postUserId={userId}
+              name={`${firstName} ${lastName}`}
+              description={description}
+              location={location}
+              picturePath={picturePath}
+              userPicturePath={userPicturePath}
+              likes={likes}
+              comments={comments}
+            />
+          ),
+        )
       ) : (
         <Box
           sx={{

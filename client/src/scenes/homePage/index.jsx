@@ -14,7 +14,7 @@ const HomePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const { _id, picturePath } = useSelector((state) => state.user);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [sortOrder, setSortOrder] = useState("latest");
+  const [sortOrder, setSortOrder] = useState("oldest");
 
   useEffect(() => {
     const handleScroll = () => {
