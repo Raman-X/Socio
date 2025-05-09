@@ -47,7 +47,7 @@ const UserWidget = ({ userId, picturePath }) => {
   } = user;
 
   return (
-    <WidgetWrapper sx={{ position: "sticky", top: "10px" }}>
+    <WidgetWrapper>
       {/* FIRST ROW */}
       <FlexBetween
         gap="0.5rem"

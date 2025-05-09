@@ -8,11 +8,13 @@ import FriendListWidget from "../widgets/FriendListWidget";
 
 import KeyboardDoubleArrowUpOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowUpOutlined";
 import { useState, useEffect } from "react";
+import SortToggle from "../widgets/SortToggle.jsx";
 
 const HomePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const { _id, picturePath } = useSelector((state) => state.user);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [sortOrder, setSortOrder] = useState("latest");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,13 +54,14 @@ const HomePage = () => {
       >
         <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
           <UserWidget userId={_id} picturePath={picturePath} />
+          <SortToggle sortOrder={sortOrder} setSortOrder={setSortOrder} />
         </Box>
         <Box
           flexBasis={isNonMobileScreens ? "42%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
           <MyPostWidget picturePath={picturePath} />
-          <PostsWidget userId={_id} />
+          <PostsWidget userId={_id} sortOrder={sortOrder} />
         </Box>
         {isNonMobileScreens && (
           <Box flexBasis="26%">
