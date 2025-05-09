@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5b9b1c03-3830-4077-9586-35eb357e4006" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/scenes/homePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/homePage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/scenes/loginPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/loginPage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Friend.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scenes/profilePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/profilePage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/FriendListWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/FriendListWidget.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/PostWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/PostWidget.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scenes/widgets/UserWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scenes/widgets/UserWidget.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/state/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/state/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/posts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +79,9 @@
       <workItem from="1746327395927" duration="18391000" />
       <workItem from="1746420230567" duration="4888000" />
       <workItem from="1746445692877" duration="14305000" />
-      <workItem from="1746467472465" duration="2059000" />
+      <workItem from="1746467472465" duration="2228000" />
+      <workItem from="1746506264608" duration="3809000" />
+      <workItem from="1746762954612" duration="4864000" />
     </task>
     <servers />
   </component>
