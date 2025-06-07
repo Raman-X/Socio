@@ -1,4 +1,4 @@
-# Social Media App
+# Social Media App Ryappi
 
 Welcome to the **Social Media App**! This platform is designed to connect people, foster communities, and share moments with friends and family.
 
@@ -14,6 +14,4 @@ Welcome to the **Social Media App**! This platform is designed to connect people
 - **Database**: MongoDB, Mongoose
 - **Authentication**: JWT
 
-## Contact
 
-For questions or feedback, please contact us at prilazshrestha090@gmail.com
